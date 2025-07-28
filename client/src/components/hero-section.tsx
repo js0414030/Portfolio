@@ -17,7 +17,14 @@ export function HeroSection() {
   };
 
   const downloadResume = () => {
-    window.open("https://docs.google.com/document/d/1968MAatXCauqLUoHsprqh-ePKNFFsE-r/edit?usp=drive_link&ouid=103757901041718067075&rtpof=true&sd=true", "_blank");
+    // Use Google Drive export link for direct PDF download
+    const downloadLink = "https://drive.google.com/uc?export=download&id=1968MAatXCauqLUoHsprqh-ePKNFFsE-r";
+    const link = document.createElement('a');
+    link.href = downloadLink;
+    link.download = 'Jatin_Sharma_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (

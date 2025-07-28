@@ -129,9 +129,14 @@ export function ProjectsSection() {
         </div>
 
         <div className="text-center mt-12">
-          <Button className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
-            View All Projects
-            <ArrowRight className="ml-2 w-4 h-4" />
+          <Button 
+            asChild
+            className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+          >
+            <a href="/projects">
+              View All Projects
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </a>
           </Button>
         </div>
       </div>
