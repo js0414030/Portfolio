@@ -1,5 +1,4 @@
-import { Card } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
+import { Button } from "@/components/ui/button";
 import { 
   SiReact, 
   SiNodedotjs, 
@@ -12,14 +11,14 @@ import {
 } from "react-icons/si";
 
 const skills = [
-  { name: "React", icon: SiReact, level: 90, color: "text-cyan-500" },
-  { name: "Node.js", icon: SiNodedotjs, level: 85, color: "text-green-500" },
-  { name: "Python", icon: SiPython, level: 80, color: "text-blue-500" },
-  { name: "MongoDB", icon: SiMongodb, level: 75, color: "text-orange-500" },
-  { name: "AWS", icon: SiAmazon, level: 70, color: "text-yellow-500" },
-  { name: "Docker", icon: SiDocker, level: 78, color: "text-blue-600" },
-  { name: "Git", icon: SiGit, level: 95, color: "text-red-500" },
-  { name: "TypeScript", icon: SiTypescript, level: 88, color: "text-purple-500" },
+  { name: "React", icon: SiReact, color: "text-cyan-500", url: "https://react.dev/" },
+  { name: "Node.js", icon: SiNodedotjs, color: "text-green-500", url: "https://nodejs.org/" },
+  { name: "Python", icon: SiPython, color: "text-blue-500", url: "https://www.python.org/" },
+  { name: "MongoDB", icon: SiMongodb, color: "text-orange-500", url: "https://www.mongodb.com/" },
+  { name: "AWS", icon: SiAmazon, color: "text-yellow-500", url: "https://aws.amazon.com/" },
+  { name: "Docker", icon: SiDocker, color: "text-blue-600", url: "https://www.docker.com/" },
+  { name: "Git", icon: SiGit, color: "text-red-500", url: "https://git-scm.com/" },
+  { name: "TypeScript", icon: SiTypescript, color: "text-purple-500", url: "https://www.typescriptlang.org/" },
 ];
 
 export function AboutSection() {
@@ -64,7 +63,30 @@ export function AboutSection() {
           </div>
         </div>
 
-        
+        <div className="mt-20">
+          <h3 className="text-3xl font-bold text-center mb-12 text-slate-900 dark:text-white">
+            Skills & Technologies
+          </h3>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 justify-items-center">
+            {skills.map((skill) => {
+              const IconComponent = skill.icon;
+              return (
+                <Button
+                  key={skill.name}
+                  variant="ghost"
+                  className="p-4 h-auto flex flex-col items-center space-y-3 hover:scale-110 hover:shadow-lg transition-all duration-300 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-primary/50"
+                  onClick={() => window.open(skill.url, '_blank', 'noopener,noreferrer')}
+                >
+                  <IconComponent className={`text-5xl ${skill.color} transition-transform duration-300`} />
+                  <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                    {skill.name}
+                  </span>
+                </Button>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );
