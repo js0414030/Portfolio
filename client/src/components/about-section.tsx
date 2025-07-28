@@ -64,32 +64,7 @@ export function AboutSection() {
           </div>
         </div>
 
-        <div className="mt-20">
-          <h3 className="text-3xl font-bold text-center mb-12 text-slate-900 dark:text-white">
-            Skills & Technologies
-          </h3>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {skills.map((skill) => {
-              const IconComponent = skill.icon;
-              return (
-                <Card 
-                  key={skill.name}
-                  className="p-6 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-slate-100 dark:bg-slate-700 border-0"
-                >
-                  <IconComponent className={`text-4xl ${skill.color} mb-4 mx-auto`} />
-                  <h4 className="font-semibold text-slate-900 dark:text-white mb-2">
-                    {skill.name}
-                  </h4>
-                  <Progress 
-                    value={skill.level} 
-                    className="h-2 bg-slate-200 dark:bg-slate-600"
-                  />
-                </Card>
-              );
-            })}
-          </div>
-        </div>
+        
       </div>
     </section>
   );
