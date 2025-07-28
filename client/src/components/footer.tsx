@@ -26,7 +26,7 @@ export function Footer() {
         <div className="text-center">
           <div className="mb-8">
             <span className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              AJ
+              JS
             </span>
           </div>
           
@@ -44,7 +44,7 @@ export function Footer() {
           
           <div className="border-t border-slate-700 pt-8">
             <p className="text-slate-400">
-              &copy; 2024 Alex Johnson. All rights reserved. Built with passion and modern web technologies.
+              &copy; 2024 Jatin Sharma. All rights reserved. Built with passion and modern web technologies.
             </p>
           </div>
         </div>

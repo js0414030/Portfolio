@@ -71,28 +71,27 @@ export function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      value: "alex.johnson@email.com",
+      value: "js0414030@gmail.com",
       color: "text-primary"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+91 9837026530",
       color: "text-primary"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "Haridwar, Uttarakhand",
       color: "text-primary"
     }
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "#" },
-    { icon: Github, href: "#" },
-    { icon: Twitter, href: "#" },
-    { icon: Instagram, href: "#" }
+    { icon: Linkedin, href: "https://www.linkedin.com/in/jatin-sharma-a9506a258/" },
+    { icon: Github, href: "https://github.com/js0414030" },
+    { icon: Twitter, href: "https://x.com/JatinSh43985969" }
   ];
 
   return (

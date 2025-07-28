@@ -59,7 +59,7 @@ export function Navigation() {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              AJ
+              JS
             </span>
           </div>
           
