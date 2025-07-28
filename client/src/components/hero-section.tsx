@@ -17,7 +17,7 @@ export function HeroSection() {
   };
 
   const downloadResume = () => {
-    window.open("/api/resume", "_blank");
+    window.open("https://docs.google.com/document/d/1968MAatXCauqLUoHsprqh-ePKNFFsE-r/edit?usp=drive_link&ouid=103757901041718067075&rtpof=true&sd=true", "_blank");
   };
 
   return (

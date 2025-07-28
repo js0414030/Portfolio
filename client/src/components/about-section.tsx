@@ -1,24 +1,38 @@
 import { Button } from "@/components/ui/button";
+import { Database } from "lucide-react";
 import { 
   SiReact, 
   SiNodedotjs, 
   SiPython, 
   SiMongodb, 
-  SiAmazon, 
   SiDocker, 
   SiGit, 
-  SiTypescript 
+  SiGithub,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiMysql,
+  SiRender,
+  SiVercel,
+  SiCplusplus
 } from "react-icons/si";
 
 const skills = [
-  { name: "React", icon: SiReact, color: "text-cyan-500", url: "https://react.dev/" },
   { name: "Node.js", icon: SiNodedotjs, color: "text-green-500", url: "https://nodejs.org/" },
-  { name: "Python", icon: SiPython, color: "text-blue-500", url: "https://www.python.org/" },
-  { name: "MongoDB", icon: SiMongodb, color: "text-orange-500", url: "https://www.mongodb.com/" },
-  { name: "AWS", icon: SiAmazon, color: "text-yellow-500", url: "https://aws.amazon.com/" },
-  { name: "Docker", icon: SiDocker, color: "text-blue-600", url: "https://www.docker.com/" },
+  { name: "HTML", icon: SiHtml5, color: "text-orange-500", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+  { name: "CSS", icon: SiCss3, color: "text-blue-500", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  { name: "JavaScript", icon: SiJavascript, color: "text-yellow-500", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { name: "Python", icon: SiPython, color: "text-blue-600", url: "https://www.python.org/" },
+  { name: "MongoDB", icon: SiMongodb, color: "text-green-600", url: "https://www.mongodb.com/" },
   { name: "Git", icon: SiGit, color: "text-red-500", url: "https://git-scm.com/" },
-  { name: "TypeScript", icon: SiTypescript, color: "text-purple-500", url: "https://www.typescriptlang.org/" },
+  { name: "GitHub", icon: SiGithub, color: "text-gray-600", url: "https://github.com/" },
+  { name: "Docker", icon: SiDocker, color: "text-blue-500", url: "https://www.docker.com/" },
+  { name: "MySQL", icon: SiMysql, color: "text-blue-700", url: "https://www.mysql.com/" },
+  { name: "React", icon: SiReact, color: "text-cyan-500", url: "https://react.dev/" },
+  { name: "Render", icon: SiRender, color: "text-purple-500", url: "https://render.com/" },
+  { name: "Vercel", icon: SiVercel, color: "text-black dark:text-white", url: "https://vercel.com/" },
+  { name: "C++", icon: SiCplusplus, color: "text-blue-600", url: "https://isocpp.org/" },
+  { name: "SQL", icon: Database, color: "text-indigo-600", url: "https://www.w3schools.com/sql/" },
 ];
 
 export function AboutSection() {
