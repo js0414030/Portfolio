@@ -1,36 +1,35 @@
-import { sql } from "drizzle-orm";
-import { pgTable, text, varchar, timestamp } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const users = pgTable("users", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  username: text("username").notNull().unique(),
-  password: text("password").notNull(),
+// MongoDB Schemas using Zod
+export const userSchema = z.object({
+  _id: z.string().optional(), // MongoDB ObjectId
+  username: z.string().min(1),
+  password: z.string().min(1),
+  createdAt: z.date().default(() => new Date()),
 });
 
-export const contacts = pgTable("contacts", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  name: text("name").notNull(),
-  email: text("email").notNull(),
-  subject: text("subject").notNull(),
-  message: text("message").notNull(),
-  createdAt: timestamp("created_at").defaultNow().notNull(),
+export const contactSchema = z.object({
+  _id: z.string().optional(), // MongoDB ObjectId
+  name: z.string().min(1),
+  email: z.string().email(),
+  subject: z.string().min(1),
+  message: z.string().min(1),
+  createdAt: z.date().default(() => new Date()),
 });
 
-export const insertUserSchema = createInsertSchema(users).pick({
-  username: true,
-  password: true,
+// Insert schemas (without _id and createdAt)
+export const insertUserSchema = userSchema.omit({ 
+  _id: true,
+  createdAt: true 
 });
 
-export const insertContactSchema = createInsertSchema(contacts).pick({
-  name: true,
-  email: true,
-  subject: true,
-  message: true,
+export const insertContactSchema = contactSchema.omit({ 
+  _id: true,
+  createdAt: true 
 });
 
+// TypeScript types
+export type User = z.infer<typeof userSchema> & { id: string };
 export type InsertUser = z.infer<typeof insertUserSchema>;
-export type User = typeof users.$inferSelect;
+export type Contact = z.infer<typeof contactSchema> & { id: string };
 export type InsertContact = z.infer<typeof insertContactSchema>;
-export type Contact = typeof contacts.$inferSelect;

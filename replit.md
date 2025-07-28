@@ -20,15 +20,15 @@ Preferred communication style: Simple, everyday language.
 ### Backend Architecture
 - **Runtime**: Node.js with Express.js
 - **Language**: TypeScript with ES modules
-- **Database**: PostgreSQL with Drizzle ORM
-- **Database Provider**: Neon Database (serverless PostgreSQL)
+- **Database**: MongoDB with Mongoose ODM
+- **Database Provider**: MongoDB Atlas or any MongoDB instance
 - **Development**: In-memory storage fallback for development
 
 ### Key Components
 
 #### Database Schema
-- **Users Table**: Basic user authentication structure (id, username, password)
-- **Contacts Table**: Contact form submissions (id, name, email, subject, message, createdAt)
+- **Users Collection**: Basic user authentication structure (_id, username, password, createdAt)
+- **Contacts Collection**: Contact form submissions (_id, name, email, subject, message, createdAt)
 
 #### API Endpoints
 - `POST /api/contact` - Submit contact form
@@ -73,8 +73,7 @@ Preferred communication style: Simple, everyday language.
 ## External Dependencies
 
 ### Core Dependencies
-- **@neondatabase/serverless**: PostgreSQL database connection for serverless environments
-- **drizzle-orm**: Type-safe ORM for database operations
+- **mongoose**: MongoDB object document mapper (ODM) for Node.js
 - **@tanstack/react-query**: Server state management and caching
 - **wouter**: Lightweight client-side routing
 - **react-hook-form**: Form handling and validation
@@ -88,19 +87,18 @@ Preferred communication style: Simple, everyday language.
 ### Development Tools
 - **tsx**: TypeScript execution for development
 - **esbuild**: Fast JavaScript bundler for production builds
-- **drizzle-kit**: Database schema management and migrations
 
 ## Deployment Strategy
 
 ### Build Process
 1. **Frontend Build**: Vite builds React application to `dist/public`
 2. **Backend Build**: esbuild bundles server code to `dist/index.js`
-3. **Database**: Drizzle migrations applied via `drizzle-kit push`
+3. **Database**: MongoDB connection established automatically on startup
 
 ### Environment Configuration
 - **Development**: Uses in-memory storage and Vite dev server
-- **Production**: Connects to PostgreSQL database via DATABASE_URL
-- **Database**: Requires DATABASE_URL environment variable for PostgreSQL connection
+- **Production**: Connects to MongoDB database via MONGODB_URI or DATABASE_URL
+- **Database**: Requires MONGODB_URI or DATABASE_URL environment variable for MongoDB connection
 
 ### File Structure
 - `client/`: Frontend React application
