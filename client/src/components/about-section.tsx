@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Database } from "lucide-react";
-import { 
-  SiReact, 
-  SiNodedotjs, 
-  SiPython, 
-  SiMongodb, 
-  SiDocker, 
-  SiGit, 
+import {
+  SiReact,
+  SiNodedotjs,
+  SiPython,
+  SiMongodb,
+  SiDocker,
+  SiGit,
   SiGithub,
   SiHtml5,
   SiCss3,
@@ -44,7 +44,7 @@ export function AboutSection() {
             About Me
           </h2>
           <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-            A passionate full-stack developer with 5+ years of experience building scalable web applications. 
+            A passionate full-stack developer with experience of building scalable web applications.
             I love turning complex problems into simple, beautiful solutions.
           </p>
         </div>
@@ -54,25 +54,25 @@ export function AboutSection() {
             <h3 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">My Story</h3>
             <div className="space-y-4 text-slate-600 dark:text-slate-400">
               <p>
-                Started my journey in computer science with a curiosity for how things work. 
+                Started my journey in computer science with a curiosity for how things work.
                 What began as tinkering with HTML and CSS evolved into a deep passion for creating full-scale applications.
               </p>
               <p>
-                I specialize in React, Node.js, and modern web technologies, always staying current with industry trends and best practices. 
+                I specialize in React, Node.js, and modern web technologies, always staying current with industry trends and best practices.
                 My goal is to write clean, maintainable code that solves real-world problems.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies, contributing to open source, 
+                When I'm not coding, you'll find me exploring new technologies, contributing to open source,
                 or sharing knowledge with the developer community.
               </p>
             </div>
           </div>
 
           <div>
-            <img 
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" 
-              alt="Modern developer workspace" 
-              className="rounded-2xl shadow-2xl w-full h-auto" 
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400"
+              alt="Modern developer workspace"
+              className="rounded-2xl shadow-2xl w-full h-auto"
             />
           </div>
         </div>
@@ -81,7 +81,7 @@ export function AboutSection() {
           <h3 className="text-3xl font-bold text-center mb-12 text-slate-900 dark:text-white">
             Skills & Technologies
           </h3>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 justify-items-center">
             {skills.map((skill) => {
               const IconComponent = skill.icon;
