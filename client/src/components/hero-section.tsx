@@ -35,7 +35,7 @@ export function HeroSection() {
         <div className="text-center">
           <div className="mb-8 animate-fade-in-up">
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300" 
+              src="Image1234.jpeg.jpg" 
               alt="Jatin Sharma Profile" 
               className="w-32 h-32 rounded-full mx-auto mb-8 object-cover border-4 border-white dark:border-slate-800 shadow-2xl" 
             />
