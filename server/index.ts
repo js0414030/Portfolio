@@ -71,8 +71,10 @@ app.use((req, res, next) => {
   //   log(`serving on port ${port}`);
   // });
   // ...existing code...
+
+  const host = process.env.RENDER ? '0.0.0.0' : '127.0.0.1';
   const port = parseInt(process.env.PORT || '3000', 10);
-  server.listen(port, '127.0.0.1', () => {
-    log(`Server running at http://localhost:${port}`);
+  server.listen(port, host, () => {
+    log(`Server running at http://${host}:${port}`);
   });
 })();

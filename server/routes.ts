@@ -59,10 +59,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Resume download endpoint
   app.get("/api/resume", (req, res) => {
-    // In a real application, this would serve an actual resume file
-    res.setHeader('Content-Disposition', 'attachment; filename="Alex_Johnson_Resume.pdf"');
-    res.setHeader('Content-Type', 'application/pdf');
-    res.status(200).send("Resume download would be implemented here with actual file");
+    // Redirect to the Google Drive resume link
+    res.redirect(302, "https://drive.google.com/file/d/1r2-fxbTEEnLe4_r090JDeHBNILQW5D12/view?usp=sharing");
   });
 
   const httpServer = createServer(app);

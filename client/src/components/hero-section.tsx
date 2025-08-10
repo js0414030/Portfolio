@@ -17,14 +17,8 @@ export function HeroSection() {
   };
 
   const downloadResume = () => {
-    // Use Google Drive export link for direct PDF download
-    const downloadLink = "https://drive.google.com/uc?export=download&id=1968MAatXCauqLUoHsprqh-ePKNFFsE-r";
-    const link = document.createElement('a');
-    link.href = downloadLink;
-    link.download = 'Jatin_Sharma_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Open the backend endpoint in a new tab (which redirects to Google Drive)
+    window.open("/api/resume", "_blank");
   };
 
   return (
